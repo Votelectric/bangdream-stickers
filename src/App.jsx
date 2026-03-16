@@ -10,7 +10,6 @@ import Picker from "./components/Picker";
 import Info from "./components/Info";
 // import getConfiguration from "./utils/config";
 // import log from "./utils/log";
-import { bannerViewed } from "./utils/banner";
 
 const { ClipboardItem } = window;
 
