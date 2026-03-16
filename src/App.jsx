@@ -42,6 +42,7 @@ function App() {
 
   const [character, setCharacter] = useState(49);
   const [text, setText] = useState(characters[character].defaultText.text);
+  const [config] = useState(JSON.parse(localStorage.getItem('config')) || {});
   const [position, setPosition] = useState({
     x: characters[character].defaultText.x,
     y: characters[character].defaultText.y,
