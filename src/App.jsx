@@ -10,10 +10,16 @@ import Picker from "./components/Picker";
 import Info from "./components/Info";
 // import getConfiguration from "./utils/config";
 // import log from "./utils/log";
+// eslint-disable-next-line no-unused-vars
+import { bannerViewed, setBannerViewed } from "./utils/banner";
 
 const { ClipboardItem } = window;
-
+// eslint-disable-next-line no-unused-vars
 function App() {
+  // eslint-disable-next-line no-unused-vars
+  const [config, setConfig] = useState(null);
+  // eslint-disable-next-line no-unused-vars
+  const [bannerView, setBannerView] = useState(bannerViewed());
 
   // using this to trigger the useEffect because lazy to think of a better way
   const [rand, setRand] = useState(0);
@@ -41,7 +47,6 @@ function App() {
 
   const [character, setCharacter] = useState(49);
   const [text, setText] = useState(characters[character].defaultText.text);
-  const [config] = useState(JSON.parse(localStorage.getItem('config')) || {});
   const [position, setPosition] = useState({
     x: characters[character].defaultText.x,
     y: characters[character].defaultText.y,
