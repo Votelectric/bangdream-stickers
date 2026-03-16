@@ -3,14 +3,13 @@ import {
   ImageListItem,
   Popover,
   Button,
-  TextField,
 } from "@mui/material";
 import { useState, useMemo } from "react";
 import characters from "../characters.json";
 
 export default function Picker({ setCharacter }) {
   const [anchorEl, setAnchorEl] = useState(null);
-  const [search, setSearch] = useState("");
+  const [search] = useState("");
 
   const handleClick = (event) => {
     setAnchorEl(event.currentTarget);
